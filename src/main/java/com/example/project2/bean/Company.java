@@ -11,7 +11,6 @@ public class Company {
     private int id;
     private String name, email, password;
     @OneToMany(mappedBy = "company", cascade = CascadeType.REMOVE,fetch = FetchType.EAGER)
-    @JoinColumn(name = "coupon")
     private List<Coupon> coupons;
 
     public Company() {

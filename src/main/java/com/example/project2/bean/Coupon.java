@@ -11,6 +11,7 @@ public class Coupon {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
+    @JoinColumn(name = "company_id")
     private Company company;
     @Enumerated(EnumType.STRING)
     private Category category;

@@ -11,7 +11,7 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String firstName, lastName, email, password;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private Set<Coupon> coupons;
 
     public Customer() {
